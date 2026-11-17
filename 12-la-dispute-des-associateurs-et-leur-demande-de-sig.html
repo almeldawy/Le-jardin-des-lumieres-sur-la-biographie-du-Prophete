@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>La dispute des associateurs et leur demande de signes · Le jardin des lumières — biographie du Prophète élu ﷺ</title>
+<meta name="description" content="Traduction française intégrale de « Rawdat al-Anwâr fî Sîrat an-Nabî al-Mukhtâr » de Safî ar-Rahmân al-Mubârakfûrî.">
+<meta name="theme-color" content="#23575e">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+/* Layout: liseuse — sommaire en tiroir à gauche, colonne de lecture centrée ~66ch, barre d'outils collante en haut avec la progression. */
+:root{
+  --paper:#f6f7f5; --page:#ffffff; --ink:#1b2129; --muted:#5d6670; --rule:#dfe3e2;
+  --accent:#23575e; --accent-soft:#e4eeee; --quran:#eef4ef; --quran-edge:#5f8a6b;
+  --hadith:#f3f1ea; --hadith-edge:#9a8455; --mark:#b4502f;
+  --f-body:"Literata", Georgia, "Times New Roman", serif;
+  --f-label:"Spectral SC", "Literata", Georgia, serif;
+  --f-quran:"AmiriQuranEmb","Amiri Quran", "Amiri", "Scheherazade New", "Traditional Arabic", serif;
+  --f-ar:"AmiriEmb","Amiri", "Scheherazade New", "Traditional Arabic", serif;
+  --f-ui: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs: 1.08rem;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#121619; --page:#181d21; --ink:#e3e6e4; --muted:#9aa4a8; --rule:#2c3438;
+  --accent:#7fb9bf; --accent-soft:#1f2e31; --quran:#17241c; --quran-edge:#7fae8c;
+  --hadith:#241f16; --hadith-edge:#c9ad72; --mark:#e08b6c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#121619; --page:#181d21; --ink:#e3e6e4; --muted:#9aa4a8; --rule:#2c3438;
+  --accent:#7fb9bf; --accent-soft:#1f2e31; --quran:#17241c; --quran-edge:#7fae8c;
+  --hadith:#241f16; --hadith-edge:#c9ad72; --mark:#e08b6c; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--fs);line-height:1.7}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--page)}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--page);border-bottom:1px solid var(--rule);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.bar-in{display:flex;align-items:center;gap:8px;min-height:52px;font-family:var(--f-ui);font-size:.9rem}
+.bar .ttl{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+.bar .ttl b{color:var(--ink);font-weight:600}
+.ib{border:1px solid var(--rule);background:transparent;border-radius:8px;min-width:38px;height:36px;padding:0 10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.ib:hover{border-color:var(--accent);color:var(--accent)}
+.ib.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.prog{height:3px;background:var(--rule);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px)))}
+.prog i{display:block;height:100%;width:0;background:var(--accent);transition:width .15s}
+.pct{font-variant-numeric:tabular-nums;color:var(--muted);min-width:3.2em;text-align:right}
+@media (max-width:560px){.hide-s{display:none}}
+
+.drawer{position:fixed;inset:0 auto 0 0;width:min(380px,88vw);background:var(--page);border-right:1px solid var(--rule);z-index:40;
+  transform:translateX(-102%);transition:transform .2s;display:flex;flex-direction:column;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px)}
+.drawer.open{transform:none}
+.shade{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:35}
+.booktitle{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-decoration:none;color:var(--ink);min-width:0}.booktitle:hover .bt-fr{text-decoration:underline}.bt-ar{font-family:"Amiri",serif;font-size:1.35rem;line-height:1.3;color:var(--accent,inherit)}.bt-fr{font-family:var(--f-label);font-size:.95rem;letter-spacing:.03em}
+.dh{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--rule);font-family:var(--f-label);font-size:1.05rem;letter-spacing:.03em}
+.tabs{display:flex;gap:6px;padding:10px 16px 0;font-family:var(--f-ui);font-size:.88rem}
+.dl{overflow:auto;padding:8px 8px 24px;font-family:var(--f-ui);font-size:.9rem;line-height:1.4}
+.dl a{display:block;text-decoration:none;color:var(--ink);padding:6px 10px;border-radius:6px}
+.dl a:hover{background:var(--accent-soft)}
+.dl a.cur{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.dl .l1{font-family:var(--f-label);font-size:.98rem;margin-top:10px;color:var(--accent)}
+.dl .l2{padding-left:18px}.dl .l3{padding-left:30px;color:var(--muted);font-size:.86rem}
+.dl .l4{padding-left:42px;color:var(--muted);font-size:.84rem}.dl .l5{padding-left:54px;color:var(--muted);font-size:.82rem}
+.bm{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-bottom:1px solid var(--rule)}
+.bm a{flex:1;padding:0}.bm small{display:block;color:var(--muted)}
+.bm button{border:0;background:transparent;color:var(--muted);cursor:pointer;font-size:1.1rem}
+.empty{color:var(--muted);padding:16px 10px}
+
+main{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px}
+.page{max-width:44rem;margin:0 auto;background:var(--page);border:1px solid var(--rule);border-radius:4px;padding:clamp(20px,5vw,56px)}
+.page p{margin:0 0 1em;hyphens:auto;text-align:justify;text-wrap:pretty}
+h1,h2,h3,h4,h5{text-wrap:balance;line-height:1.3;font-weight:600}
+h1.h1{font-family:var(--f-label);font-weight:600;font-size:1.75rem;letter-spacing:.02em;color:var(--accent);margin:0 0 1.2em;text-align:center}
+h2.h2{font-size:1.45rem;margin:0 0 1.1em;padding-bottom:.5em;border-bottom:1px solid var(--rule)}
+h3{font-size:1.22rem;margin:2em 0 .8em;color:var(--accent)}
+h4{font-size:1.08rem;margin:1.8em 0 .6em}
+h5{font-size:1rem;margin:1.5em 0 .5em;font-style:italic}
+h3,h4,h5{scroll-margin-top:80px}
+.plan{list-style:none;padding:0;margin:0 0 1.4em}
+.plan li{padding:3px 0}.plan .d1{padding-left:1.4em}.plan .d2{padding-left:2.8em}
+.plan .d0{font-weight:600}
+.stars{text-align:center;color:var(--muted);letter-spacing:.6em;margin:2em 0}
+.sign{text-align:left;margin-top:1.6em}
+
+figure.cite{margin:1.4em 0 1.6em;padding:14px 18px 12px;border-radius:3px;border-left:3px solid var(--quran-edge);background:var(--quran)}
+figure.hadith,figure.arabic{border-left-color:var(--hadith-edge);background:var(--hadith)}
+.lab{font-family:var(--f-ui);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:2px 0 6px}
+blockquote{margin:0}
+blockquote.ar{direction:rtl;text-align:right;font-family:var(--f-ar);font-size:1.5em;line-height:2.15;margin-bottom:12px;color:var(--ink)}
+figure.quran blockquote.ar{font-family:var(--f-quran);font-size:1.55em;line-height:2.3}
+blockquote.fr p{margin:0 0 .5em;text-align:left}
+figcaption{font-family:var(--f-ui);font-size:.82rem;color:var(--muted);margin-top:6px;line-height:1.5}
+figure.quran figcaption{color:var(--quran-edge);font-weight:600}
+sup.fn a{font-family:var(--f-ui);font-size:.68rem;text-decoration:none;padding:0 2px;color:var(--mark)}
+aside.notes{margin-top:2.6em;padding-top:1em;border-top:1px solid var(--rule);font-size:.88rem;line-height:1.55;color:var(--muted)}
+aside.notes h4{font-family:var(--f-label);margin:0 0 .6em;color:var(--ink);font-size:1rem}
+aside.notes ol{padding-left:2.2em;margin:0}aside.notes li{margin-bottom:.45em}
+aside.notes li:target{color:var(--ink);background:var(--accent-soft)}
+.back{text-decoration:none}
+.nav{max-width:44rem;margin:18px auto 0;display:flex;justify-content:space-between;gap:10px;font-family:var(--f-ui);font-size:.9rem}
+.nav button{flex:1;min-width:0;text-align:left;padding:10px 14px;border:1px solid var(--rule);background:var(--page);border-radius:4px;cursor:pointer}
+.nav button.nx{text-align:right}
+.nav button small{display:block;color:var(--muted);font-size:.75rem}
+.nav button span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav button:disabled{visibility:hidden}
+
+/* Couverture */
+.cover{text-align:center;padding-block:clamp(24px,6vw,64px)}
+.cover .arttl{font-family:var(--f-ar);font-size:clamp(2rem,7vw,3rem);direction:rtl;color:var(--accent);line-height:1.6;margin:0}
+.cover .arsub{font-family:var(--f-ar);font-size:1.25rem;direction:rtl;color:var(--muted);margin:.2em 0 1.4em}
+.cover h1{font-family:var(--f-label);font-size:clamp(1.5rem,4.5vw,2.1rem);margin:0 0 .3em;letter-spacing:.02em}
+.cover .sub{font-style:italic;color:var(--muted);margin:0 0 1.6em}
+.cover .au{font-family:var(--f-label);font-size:1.05rem;margin:0 0 .2em}
+.cover .tr{color:var(--muted);font-size:.9rem;margin:0 0 2em}
+.cover .rule{width:80px;height:1px;background:var(--accent);margin:1.6em auto}
+.cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;font-family:var(--f-ui)}
+.cta button{padding:11px 18px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:var(--page);cursor:pointer;font-weight:600}
+.cta button.alt{background:transparent;color:var(--accent)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--page);padding:9px 16px;border-radius:6px;font-family:var(--f-ui);font-size:.88rem;z-index:50}
+.ctoc{margin-top:2.4em;border-top:1px solid var(--rule);padding-top:1.6em}
+.ctoc h2{font-family:var(--f-label);font-size:1.4rem;text-align:center;color:var(--accent);margin:0 0 1em;letter-spacing:.03em}
+.ctoc ol{list-style:none;padding:0;margin:0}
+.ctoc li a{display:block;text-decoration:none;color:var(--ink);padding:5px 8px;border-radius:4px}
+.ctoc li a:hover{background:var(--accent-soft)}
+.ctoc .c1 a{font-family:var(--f-label);font-size:1.08rem;color:var(--accent);margin-top:.9em;border-bottom:1px solid var(--rule);border-radius:0}
+.ctoc .c2 a{padding-left:1.4em;font-weight:600;font-size:.98rem}
+.ctoc .c3 a{padding-left:2.8em;font-size:.92rem;color:var(--muted)}
+
+
+/* sommaire déroulant à gauche */
+.grp .gh{display:flex;align-items:flex-start;gap:2px;margin-top:8px}
+.grp .gh a{flex:1;margin-top:0}
+.car{border:0;background:transparent;color:var(--accent);cursor:pointer;width:26px;height:30px;flex:none;font-size:.85rem;transition:transform .15s;border-radius:4px}
+.car:hover{background:var(--accent-soft)}
+.grp.open .car{transform:rotate(90deg)}
+.grp .kids{display:none;border-left:1px solid var(--rule);margin-left:12px}
+.grp.open .kids{display:block}
+.dl .l1.solo{margin-left:28px}
+.dl .l2{padding-left:12px}.dl .l3{padding-left:24px}.dl .l4{padding-left:36px}.dl .l5{padding-left:48px}
+@media (min-width:1080px){
+  .drawer{transform:none;width:330px;z-index:25;box-shadow:none}
+  #btn-close{display:none}
+  .shade{display:none!important}
+  body:not(.side-off) .bar, body:not(.side-off) main{margin-left:330px}
+  body.side-off .drawer{transform:translateX(-102%)}
+  .bar,main{transition:margin-left .2s}
+}
+/* --- raffinements --- */
+.page{border:0;box-shadow:0 1px 2px rgba(20,40,45,.06),0 8px 30px rgba(20,40,45,.06);border-radius:2px;position:relative}
+:root[data-theme="dark"] .page{box-shadow:none;border:1px solid var(--rule)}
+.page p{text-align:left}
+@media (min-width:640px){.page p{text-align:justify}}
+.sh{text-align:center;margin:0 0 2.2em}
+.sh .orn{display:block;width:26px;height:26px;margin:0 auto 14px;background:var(--accent);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='black'%3E%3Crect x='10' y='10' width='20' height='20'/%3E%3Crect x='10' y='10' width='20' height='20' transform='rotate(45 20 20)'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='5' fill='white'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='black'%3E%3Crect x='10' y='10' width='20' height='20'/%3E%3Crect x='10' y='10' width='20' height='20' transform='rotate(45 20 20)'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='5' fill='white'/%3E%3C/svg%3E") center/contain no-repeat;opacity:.85}
+.sh h1,.sh h2{margin:0;border:0;padding:0;color:var(--ink)}
+.eb{display:block;font-family:var(--f-label);font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.55em}
+.tt{display:block}
+.sh h1 .tt{font-family:var(--f-body);font-size:clamp(1.6rem,4.5vw,2.2rem);font-weight:600;line-height:1.25}
+.sh h2 .tt{font-size:clamp(1.35rem,3.6vw,1.7rem);line-height:1.3}
+.sh::after{content:"";display:block;width:56px;height:1px;background:var(--accent);margin:1.2em auto 0;opacity:.6}
+.sh.l1{padding:2.2em 0 .6em}
+.sh.l1 .orn{width:40px;height:40px}
+h3{color:var(--ink);font-size:1.18rem;margin:2.4em 0 1em;padding-top:1.2em;border-top:1px solid var(--rule)}
+h3 .eb{font-size:.72rem;margin-bottom:.4em}
+h4{color:var(--accent)}
+figure.cite{border-radius:2px}
+figure.quran{background:linear-gradient(var(--quran),var(--quran)) padding-box;}
+.plan{border:1px solid var(--rule);border-radius:2px;padding:1em 1.2em;background:var(--paper)}
+/* couverture */
+.cover{position:relative;border:1px solid var(--accent);outline:1px solid var(--accent);outline-offset:-8px;padding:clamp(28px,6vw,60px) clamp(16px,4vw,40px);margin-bottom:.5em;overflow:hidden}
+.cover::before{content:"";position:absolute;inset:0 0 auto;height:110px;background:var(--accent);opacity:.09;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='black' stroke-width='1'%3E%3Crect x='15' y='15' width='30' height='30'/%3E%3Crect x='15' y='15' width='30' height='30' transform='rotate(45 30 30)'/%3E%3Cpath d='M0 0L15 15M60 0L45 15M0 60L15 45M60 60L45 45'/%3E%3C/g%3E%3C/svg%3E") 0 0/60px 60px repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='black' stroke-width='1'%3E%3Crect x='15' y='15' width='30' height='30'/%3E%3Crect x='15' y='15' width='30' height='30' transform='rotate(45 30 30)'/%3E%3Cpath d='M0 0L15 15M60 0L45 15M0 60L15 45M60 60L45 45'/%3E%3C/g%3E%3C/svg%3E") 0 0/60px 60px repeat;pointer-events:none}
+.cover > *{position:relative}
+.cover p{text-align:center!important}
+.cover .orn{display:block;width:44px;height:44px;margin:28px auto 18px;background:var(--accent);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='black'%3E%3Crect x='10' y='10' width='20' height='20'/%3E%3Crect x='10' y='10' width='20' height='20' transform='rotate(45 20 20)'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='5' fill='white'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='black'%3E%3Crect x='10' y='10' width='20' height='20'/%3E%3Crect x='10' y='10' width='20' height='20' transform='rotate(45 20 20)'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='5' fill='white'/%3E%3C/svg%3E") center/contain no-repeat}
+.cover .arttl{margin-top:.2em}
+.cover .au{font-size:1.15rem;letter-spacing:.04em}
+.ctoc{border-top:0}
+.ctoc h2{display:flex;align-items:center;gap:14px}
+.ctoc h2::before,.ctoc h2::after{content:"";flex:1;height:1px;background:var(--rule)}
+.ctoc ol{counter-reset:p}
+.ctoc .c1 a{border-bottom:0;margin-top:1.1em;padding-bottom:6px;display:flex;gap:10px;align-items:baseline}
+.nav button{border-radius:2px}
+.nav button:hover{border-color:var(--accent)}
+.ib{border-radius:6px}
+/* fenêtre des notes */
+.notepop{position:fixed;z-index:60;width:min(380px,calc(100vw - 24px));max-height:min(50vh,360px);display:flex;flex-direction:column;background:var(--page);color:var(--ink);border:1px solid var(--rule);border-top:3px solid var(--mark);border-radius:4px;box-shadow:0 10px 30px rgba(0,0,0,.18);font-size:.9rem;line-height:1.55}
+.notepop::before{content:"";position:absolute;top:-9px;left:calc(var(--ax,50%) - 6px);border:6px solid transparent;border-bottom-color:var(--mark)}
+.notepop.up::before{top:auto;bottom:-12px;border-bottom-color:transparent;border-top-color:var(--rule)}
+.np-h{display:flex;justify-content:space-between;align-items:center;padding:8px 12px 4px;font-family:var(--f-label);color:var(--mark);font-size:.9rem;letter-spacing:.04em}
+.np-x{border:0;background:transparent;cursor:pointer;color:var(--muted);font-size:1rem;padding:2px 6px}
+.np-b{padding:0 14px 8px;overflow:auto}
+.np-go{font-family:var(--f-ui);font-size:.78rem;padding:6px 14px 10px;text-decoration:none;color:var(--accent)}
+aside.notes li.flash{background:var(--accent-soft);color:var(--ink);transition:background .3s}
+sup.fn a{cursor:pointer;border-radius:3px}
+sup.fn a[aria-expanded="true"]{background:var(--mark);color:var(--page)}
+
+/* lecture sur PC : colonne plus large */
+@media (min-width:1080px){.page,.nav{max-width:52rem}}
+@media (min-width:1500px){.page,.nav{max-width:56rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<div class="bar"><div class="bar-in">
+  <button class="ib" id="btn-toc" aria-label="Ouvrir le sommaire">☰ <span class="hide-s">Sommaire</span></button>
+  <div class="ttl" id="ttl"><b>Le jardin des lumières</b></div>
+  <span class="pct" id="pct">0 %</span>
+  <button class="ib" id="btn-bm" aria-label="Ajouter un marque-page" title="Ajouter un marque-page">🔖<span class="hide-s">Marquer</span></button>
+  <button class="ib" id="btn-fm" aria-label="Réduire le texte">A−</button>
+  <button class="ib" id="btn-fp" aria-label="Agrandir le texte">A+</button>
+  <button class="ib" id="btn-th" aria-label="Changer de thème" title="Clair / sombre / système">☾</button>
+</div><div class="prog"><i id="progbar"></i></div></div>
+
+<div class="shade" id="shade" hidden></div>
+<nav class="drawer" id="drawer" aria-label="Sommaire">
+  <div class="dh"><a class="booktitle" href="index.html" title="Revenir à la couverture"><span class="bt-ar" lang="ar" dir="rtl">روضة الأنوار</span><span class="bt-fr">Le jardin des lumières</span></a><button class="ib" id="btn-close" aria-label="Fermer">✕</button></div>
+  <div class="tabs"><button class="ib on" id="tab-toc">Sommaire</button><button class="ib" id="tab-bm">Marque-pages <span id="bmcount"></span></button></div>
+  <div class="dl" id="toclist"></div>
+  <div class="dl" id="bmlist" hidden></div>
+</nav>
+
+<main><article class="page" id="page"></article>
+<div class="nav"><button id="prev"><small>Précédent</small><span id="prevt"></span></button><button class="nx" id="next"><small>Suivant</small><span id="nextt"></span></button></div></main>
+
+<script id="data" type="application/json">{"sections": [{"id": "s1", "title": "Présentation de l'auteur et de l'ouvrage", "level": 1, "html": ""}, {"id": "s2", "title": "Introduction de l'auteur", "level": 1, "html": ""}, {"id": "s3", "title": "Muhammad ﷺ : ses origines, sa jeunesse et sa vie avant la prophétie", "level": 1, "html": ""}, {"id": "s4", "title": "La prophétie et l'appel", "level": 1, "html": ""}, {"id": "s5", "title": "La proclamation publique de l'appel", "level": 1, "html": ""}, {"id": "s6", "title": "L'attitude des associateurs envers le Messager d'Allah ﷺ", "level": 1, "html": ""}, {"id": "s7", "title": "Les agressions contre le Messager d'Allah ﷺ", "level": 1, "html": ""}, {"id": "s8", "title": "La présentation d'avantages et de tentations", "level": 1, "html": ""}, {"id": "s9", "title": "Le boycott général et l'imposition du blocus", "level": 1, "html": ""}, {"id": "s10", "title": "L'année de la tristesse", "level": 1, "html": ""}, {"id": "s11", "title": "Le Messager ﷺ à Tâ'if", "level": 1, "html": ""}, {"id": "s12", "title": "La dispute des associateurs et leur demande de signes", "level": 1, "html": "<header class=\"sh l1\"><span class=\"orn\" aria-hidden=\"true\"><\/span><h1 class=\"h1\"><span class=\"tt\">La dispute des associateurs et leur demande de signes<\/span><\/h1><\/header><p>Parmi les disputes des associateurs, il y avait le fait qu'ils réclamaient au Messager d'Allah ﷺ des signes, pour le mettre en échec et par obstination. Cela se répéta à plusieurs reprises, à différents moments. Ainsi, ils se réunirent une fois dans la Mosquée sacrée, se concertèrent, puis envoyèrent dire au Prophète ﷺ : « Les notables de ton peuple sont réunis pour te parler. »<\/p><p>Comme le Prophète ﷺ désirait ardemment leur bonne direction, ainsi que l'a dit Allah, le Très-Haut :<\/p><figure class=\"cite quran\"><div class=\"lab\">Texte arabe (verset coranique)<\/div><blockquote class=\"ar\" lang=\"ar\" dir=\"rtl\">﴿فَلَعَلَّكَ بَٰخِعٞ نَّفۡسَكَ عَلَىٰٓ ءَاثَٰرِهِمۡ إِن لَّمۡ يُؤۡمِنُواْ بِهَٰذَا ٱلۡحَدِيثِ أَسَفًا﴾<\/blockquote><div class=\"lab\">Traduction française<\/div><blockquote class=\"fr\"><p>« Tu vas peut-être te consumer de chagrin sur leurs traces, s'ils ne croient pas à ce discours. »<\/p><\/blockquote><figcaption>[Al-Kahf, 18:6]<\/figcaption><\/figure><p>il vint à eux rapidement, espérant leur conversion. Ils dirent : « Tu nous apprends que les messagers avaient des signes : Moïse avait un bâton, les Thamûd avaient la chamelle, et Jésus ressuscitait les morts. Apporte-nous donc un signe, comme ceux avec lesquels les premiers ont été envoyés. »<\/p><p>Ils pensaient que l'une des propriétés des messagers était de pouvoir produire de tels prodiges et miracles quand ils le voulaient, comme le commun des gens peut accomplir ses actions naturelles.<\/p><p>Ils lui proposèrent ﷺ de leur changer as-Safâ en or, ou d'écarter d'eux les montagnes, d'aplanir pour eux le pays et d'y faire couler des rivières, ou de ressusciter ceux de leurs pères qui étaient morts, afin qu'ils témoignent qu'il était un messager.<\/p><figure class=\"cite quran\"><div class=\"lab\">Texte arabe (verset coranique)<\/div><blockquote class=\"ar\" lang=\"ar\" dir=\"rtl\">﴿وَقَالُواْ لَن نُّؤۡمِنَ لَكَ حَتَّىٰ تَفۡجُرَ لَنَا مِنَ ٱلۡأَرۡضِ يَنۢبُوعًا ۝٩٠ أَوۡ تَكُونَ لَكَ جَنَّةٞ مِّن نَّخِيلٖ وَعِنَبٖ فَتُفَجِّرَ ٱلۡأَنۡهَٰرَ خِلَٰلَهَا تَفۡجِيرًا ۝٩١ أَوۡ تُسۡقِطَ ٱلسَّمَآءَ كَمَا زَعَمۡتَ عَلَيۡنَا كِسَفًا أَوۡ تَأۡتِيَ بِٱللَّهِ وَٱلۡمَلَـٰٓئِكَةِ قَبِيلًا ۝٩٢ أَوۡ يَكُونَ لَكَ بَيۡتٞ مِّن زُخۡرُفٍ أَوۡ تَرۡقَىٰ فِي ٱلسَّمَآءِ وَلَن نُّؤۡمِنَ لِرُقِيِّكَ حَتَّىٰ تُنَزِّلَ عَلَيۡنَا كِتَٰبٗا نَّقۡرَؤُهُۥۗ قُلۡ سُبۡحَانَ رَبِّي هَلۡ كُنتُ إِلَّا بَشَرٗا رَّسُولٗا ۝٩٣﴾<\/blockquote><div class=\"lab\">Traduction française<\/div><blockquote class=\"fr\"><p>« Et ils dirent : \"Nous ne croirons pas en toi tant que tu n'auras pas fait jaillir pour nous de la terre une source ; ou que tu n'aies un jardin de palmiers et de vignes, au milieu duquel tu feras jaillir des ruisseaux en abondance ; ou que tu ne fasses tomber sur nous, comme tu le prétends, le ciel en morceaux ; ou que tu ne fasses venir Allah et les anges face à face ; ou que tu n'aies une maison d'ornements ; ou que tu ne sois monté au ciel ; et nous ne croirons pas à ta montée au ciel tant que tu n'auras pas fait descendre sur nous un livre que nous puissions lire.\" Dis : \"Gloire à mon Seigneur ! Ne suis-je qu'un être humain, messager ?\" »<\/p><\/blockquote><figcaption>[Al-Isrâ', 17:90-93]<\/figcaption><\/figure><p>Ils exprimèrent leur désir d'embrasser l'Islam si le Prophète ﷺ apportait ce qu'ils avaient proposé :<\/p><figure class=\"cite quran\"><div class=\"lab\">Texte arabe (verset coranique)<\/div><blockquote class=\"ar\" lang=\"ar\" dir=\"rtl\">﴿وَأَقۡسَمُواْ بِٱللَّهِ جَهۡدَ أَيۡمَٰنِهِمۡ لَئِن جَآءَتۡهُمۡ ءَايَةٞ لَّيُؤۡمِنُنَّ بِهَاۚ قُلۡ إِنَّمَا ٱلۡأٓيَٰتُ عِندَ ٱللَّهِۖ وَمَا يُشۡعِرُكُمۡ أَنَّهَآ إِذَا جَآءَتۡ لَا يُؤۡمِنُونَ﴾<\/blockquote><div class=\"lab\">Traduction française<\/div><blockquote class=\"fr\"><p>« Et ils ont juré par Allah de leurs serments les plus solennels que, si un signe leur venait, ils y croiraient. Dis : \"Les signes ne relèvent que d'Allah.\" Et qu'est-ce qui vous fait savoir que, lorsqu'il viendra, ils n'y croiront pas ? »<\/p><\/blockquote><figcaption>[Al-Anʿâm, 6:109]<\/figcaption><\/figure><p>Il pria Allah de leur montrer ce qu'ils avaient demandé, espérant leur conversion. Jibrîl vint et lui laissa le choix : ou bien Allah leur montrerait ce qu'ils avaient demandé, et quiconque d'entre eux mécroirait ensuite serait châtié d'un châtiment dont Il ne châtierait personne d'autre dans l'univers ; ou bien Il leur ouvrirait la porte du repentir et de la miséricorde. Il dit : « Plutôt la porte du repentir et de la miséricorde. » Lorsque le Prophète ﷺ eut fait ce choix, Allah lui révéla la réponse aux propositions des associateurs ; Il lui dit :<\/p><figure class=\"cite quran\"><div class=\"lab\">Texte arabe (verset coranique)<\/div><blockquote class=\"ar\" lang=\"ar\" dir=\"rtl\">﴿قُلۡ سُبۡحَانَ رَبِّي هَلۡ كُنتُ إِلَّا بَشَرٗا رَّسُولٗا﴾<\/blockquote><div class=\"lab\">Traduction française<\/div><blockquote class=\"fr\"><p>« Dis : \"Gloire à mon Seigneur ! Ne suis-je qu'un être humain, messager ?\" »<\/p><\/blockquote><figcaption>[Al-Isrâ', 17:93]<\/figcaption><\/figure><p>Le sens est : dis que je ne suis pas capable de produire des prodiges<\/p><p>et d'apporter des miracles, car le pouvoir de le faire est une chose propre à Allah – Gloire à Lui, le Très-Haut –, et Il est au-dessus d'avoir un associé dans Son pouvoir. Je ne suis qu'un être humain, comme vous êtes des êtres humains ; je n'en suis donc pas capable, de même que vous n'en êtes pas capables. Ce par quoi je me distingue parmi vous, c'est seulement que je suis un messager, qui reçoit la révélation, alors que vous n'êtes pas des messagers et ne recevez pas de révélation. Les signes que vous avez demandés ne sont ni entre mes mains ni sous mon pouvoir ; ils relèvent seulement d'Allah – Puissant et Majestueux : s'Il le veut, Il vous les montre et m'appuie par eux contre vous ; et s'Il le veut, Il les diffère pour vous. Et c'est en cela que réside votre intérêt.<\/p><p>Allah a confirmé ce sens dans la sourate Al-Anʿâm ; Il a dit :<\/p><figure class=\"cite quran\"><div class=\"lab\">Texte arabe (verset coranique)<\/div><blockquote class=\"ar\" lang=\"ar\" dir=\"rtl\">﴿قُلۡ إِنَّمَا ٱلۡأٓيَٰتُ عِندَ ٱللَّهِۖ وَمَا يُشۡعِرُكُمۡ أَنَّهَآ إِذَا جَآءَتۡ لَا يُؤۡمِنُونَ﴾<\/blockquote><div class=\"lab\">Traduction française<\/div><blockquote class=\"fr\"><p>« Dis : \"Les signes ne relèvent que d'Allah.\" Et qu'est-ce qui vous fait savoir que, lorsqu'il viendra, ils n'y croiront pas ? »<\/p><\/blockquote><figcaption>[Al-Anʿâm, 6:109]<\/figcaption><\/figure><p>c'est-à-dire que les prophètes et les messagers ne sont pas ceux qui produisent les prodiges et les miracles ; c'est seulement Allah – Gloire à Lui, le Très-Haut – qui les produit, et Il ne les manifeste par les mains des prophètes et des messagers que pour les honorer, les soutenir et établir leur prophétie et leur message.<\/p><p>Puis Allah – Gloire à Lui, le Très-Haut – a montré que, s'Il leur faisait voir et leur manifestait les signes qu'ils avaient demandés, ils n'y croiraient pas, bien qu'ils aient juré par Allah de leurs serments les plus solennels qu'ils y croiraient ; Il a dit :<\/p><figure class=\"cite quran\"><div class=\"lab\">Texte arabe (verset coranique)<\/div><blockquote class=\"ar\" lang=\"ar\" dir=\"rtl\">﴿۞وَلَوۡ أَنَّنَا نَزَّلۡنَآ إِلَيۡهِمُ ٱلۡمَلَـٰٓئِكَةَ وَكَلَّمَهُمُ ٱلۡمَوۡتَىٰ وَحَشَرۡنَا عَلَيۡهِمۡ كُلَّ شَيۡءٖ قُبُلٗا مَّا كَانُواْ لِيُؤۡمِنُوٓاْ إِلَّآ أَن يَشَآءَ ٱللَّهُ وَلَٰكِنَّ أَكۡثَرَهُمۡ يَجۡهَلُونَ﴾<\/blockquote><div class=\"lab\">Traduction française<\/div><blockquote class=\"fr\"><p>« Et même si Nous faisions descendre vers eux les anges, que les morts leur parlaient et que Nous rassemblions toute chose devant eux, ils ne croiraient que si Allah le veut. Mais la plupart d'entre eux ignorent. »<\/p><\/blockquote><figcaption>[Al-Anʿâm, 6:111]<\/figcaption><\/figure><p>Et Il a dit :<\/p><figure class=\"cite quran\"><div class=\"lab\">Texte arabe (verset coranique)<\/div><blockquote class=\"ar\" lang=\"ar\" dir=\"rtl\">﴿وَلَوۡ أَنَّ قُرۡءَانٗا سُيِّرَتۡ بِهِ ٱلۡجِبَالُ أَوۡ قُطِّعَتۡ بِهِ ٱلۡأَرۡضُ أَوۡ كُلِّمَ بِهِ ٱلۡمَوۡتَىٰۗ بَل لِّلَّهِ ٱلۡأَمۡرُ جَمِيعًاۗ أَفَلَمۡ يَاْيۡـَٔسِ ٱلَّذِينَ ءَامَنُوٓاْ أَن لَّوۡ يَشَآءُ ٱللَّهُ لَهَدَى ٱلنَّاسَ جَمِيعٗاۗ وَلَا يَزَالُ ٱلَّذِينَ كَفَرُواْ تُصِيبُهُم بِمَا صَنَعُواْ قَارِعَةٌ أَوۡ تَحُلُّ قَرِيبٗا مِّن دَارِهِمۡ حَتَّىٰ يَأۡتِيَ وَعۡدُ ٱللَّهِۚ إِنَّ ٱللَّهَ لَا يُخۡلِفُ ٱلۡمِيعَادَ﴾<\/blockquote><div class=\"lab\">Traduction française<\/div><blockquote class=\"fr\"><p>« Et s'il y avait un Coran par lequel les montagnes seraient mises en marche, ou la terre fendue, ou les morts rendus à la parole… Non ! Le commandement tout entier appartient à Allah. Ceux qui ont cru ne savent-ils donc pas que, si Allah le voulait, Il guiderait tous les hommes ? Ceux qui ont mécru ne cesseront d'être frappés d'un malheur à cause de ce qu'ils ont fait, ou bien [ce malheur] s'abattra près de leurs demeures, jusqu'à ce que vienne la promesse d'Allah. Allah ne manque certes pas à Sa promesse. »<\/p><\/blockquote><figcaption>[Ar-Raʿd, 13:31]<\/figcaption><\/figure><p>À travers de tels versets, Allah, le Très-Haut, a fait allusion à l'une de Ses lois : lorsqu'un peuple réclame un signe déterminé, puis n'y croit pas lorsqu'il lui vient, il est anéanti sans recevoir de délai. La loi d'Allah ne change pas et ne se modifie pas. Or Allah savait que la plupart des gens de Quraych croiraient par la suite ; c'est pourquoi Il ne leur apporta pas les signes particuliers qu'ils avaient proposés et dont il vient d'être question.<\/p><h3 id=\"s12-h62\">La fente de la lune<\/h3><p>Il semble que Quraych, voyant que le Messager d'Allah ﷺ ne leur accordait pas les signes particuliers qu'ils avaient proposés, pensa que la demande de signes était le meilleur moyen de le mettre en échec et de le faire taire, et de convaincre le commun des gens qu'il était un affabulateur et non un messager. Ils firent donc un pas de plus et décidèrent de lui demander un signe sans le préciser, afin que son impuissance apparaisse aux gens et qu'ils ne croient pas en lui. Ils vinrent à lui et lui dirent : « Y a-t-il un signe par lequel nous saurions que tu es le Messager d'Allah ? »<\/p><p>Le Messager d'Allah ﷺ demanda à son Seigneur de leur montrer un signe. Il leur montra la lune fendue en deux parties : une partie au-dessus de la montagne – le mont Abû Qubays – et une partie en dessous, au point qu'ils virent Hirâ' entre elles. Le Messager d'Allah ﷺ dit :<\/p><figure class=\"cite hadith\"><div class=\"lab\">Texte arabe (hadith)<\/div><blockquote class=\"ar\" lang=\"ar\" dir=\"rtl\">اشهدوا<\/blockquote><div class=\"lab\">Traduction française<\/div><blockquote class=\"fr\"><p>« Soyez témoins ! »<\/p><\/blockquote><\/figure><p>Quraych vit ce signe ouvertement, clairement et pendant longtemps. Ils en restèrent confondus et interdits, mais ne crurent pas. Ils dirent au contraire : « C'est la sorcellerie du fils d'Abû Kabcha ; Muhammad nous a ensorcelés. » Un homme dit : « S'il vous a ensorcelés, il ne peut pas ensorceler tous les gens. Attendez ce que vous apporteront les voyageurs. » Les voyageurs arrivèrent ; on les interrogea, et ils dirent : « Oui, nous l'avons vu. » Mais Quraych, malgré cela, persista dans sa mécréance et suivit ses passions.<\/p><p>Il semble que la fente de la lune fut comme une préparation à un événement plus grand et plus important : le Voyage nocturne et l'Ascension (al-Isrâ' wa al-Miʿrâj). En effet, voir la lune ainsi fendue, d'une vision de certitude, rend plus facile pour l'esprit d'admettre la possibilité du Voyage nocturne et de l'Ascension. Et Allah sait mieux.<\/p>"}, {"id": "s13", "title": "Le Voyage nocturne et l'Ascension", "level": 1, "html": ""}, {"id": "s14", "title": "La présentation de l'Islam aux tribus et aux individus", "level": 1, "html": ""}, {"id": "s15", "title": "Le premier serment d'al-ʿAqaba", "level": 1, "html": ""}, {"id": "s16", "title": "Le second serment d'al-ʿAqaba", "level": 1, "html": ""}, {"id": "s17", "title": "L'émigration des musulmans à Médine", "level": 1, "html": ""}, {"id": "s18", "title": "Quraych à Dâr an-Nadwa et sa décision de tuer le Prophète ﷺ", "level": 1, "html": ""}, {"id": "s19", "title": "Entre le plan de Quraych et le plan d'Allah – Gloire à Lui, le Très-Haut", "level": 1, "html": ""}, {"id": "s20", "title": "L'émigration du Prophète ﷺ", "level": 1, "html": ""}, {"id": "s21", "title": "Les œuvres du Messager d'Allah ﷺ à Médine l'illuminée", "level": 1, "html": ""}, {"id": "s22", "title": "Les provocations de Quraych", "level": 1, "html": ""}, {"id": "s23", "title": "La grande bataille de Badr", "level": 1, "html": ""}, {"id": "s24", "title": "La campagne d'Uhud", "level": 1, "html": ""}, {"id": "s25", "title": "Événements et campagnes", "level": 1, "html": ""}, {"id": "s26", "title": "La campagne des Banû an-Nadîr", "level": 1, "html": ""}, {"id": "s27", "title": "La campagne des Coalisés (al-Ahzâb)", "level": 1, "html": ""}, {"id": "s28", "title": "La campagne des Banû Qurayza", "level": 1, "html": ""}, {"id": "s29", "title": "La campagne des Banû al-Mustaliq, ou campagne d'al-Muraysîʿ", "level": 1, "html": ""}, {"id": "s30", "title": "La ʿumra d'al-Hudaybiya", "level": 1, "html": ""}, {"id": "s31", "title": "La correspondance avec les rois et les princes", "level": 1, "html": ""}, {"id": "s32", "title": "Entre les musulmans et les autres parties", "level": 1, "html": ""}, {"id": "s33", "title": "La campagne de Khaybar", "level": 1, "html": ""}, {"id": "s34", "title": "La campagne de Dhât ar-Riqâʿ", "level": 1, "html": ""}, {"id": "s35", "title": "La ʿumra de l'accomplissement (ʿumrat al-qadâ')", "level": 1, "html": ""}, {"id": "s36", "title": "La bataille de Mu'ta", "level": 1, "html": ""}, {"id": "s37", "title": "La grande conquête : la conquête de La Mecque l'honorée", "level": 1, "html": ""}, {"id": "s38", "title": "La campagne de Hunayn", "level": 1, "html": ""}, {"id": "s39", "title": "La campagne de Tabûk", "level": 1, "html": ""}, {"id": "s40", "title": "Un mot sur les campagnes", "level": 1, "html": ""}, {"id": "s41", "title": "Le pèlerinage d'Abû Bakr as-Siddîq – qu'Allah l'agrée", "level": 1, "html": ""}, {"id": "s42", "title": "Les délégations, les prédicateurs et les gouverneurs", "level": 1, "html": ""}, {"id": "s43", "title": "Le Pèlerinage d'adieu", "level": 1, "html": ""}, {"id": "s44", "title": "Vers le Compagnon suprême", "level": 1, "html": ""}, {"id": "s45", "title": "La maison du Prophète", "level": 1, "html": ""}, {"id": "s46", "title": "Les qualités physiques et morales", "level": 1, "html": ""}], "toc": [[1, "Présentation de l'auteur et de l'ouvrage", "s1", null], [2, "L'auteur", "s1", "s1-h1"], [2, "Le présent ouvrage", "s1", "s1-h2"], [2, "Note sur la traduction", "s1", "s1-h3"], [1, "Introduction de l'auteur", "s2", null], [1, "Muhammad ﷺ : ses origines, sa jeunesse et sa vie avant la prophétie", "s3", null], [2, "La noble généalogie", "s3", "s3-h4"], [2, "Sa famille ﷺ", "s3", "s3-h5"], [2, "La naissance", "s3", "s3-h6"], [2, "L'allaitement", "s3", "s3-h7"], [2, "Chez les Banû Saʿd", "s3", "s3-h8"], [2, "Les bénédictions dans la maison de l'allaitement", "s3", "s3-h9"], [2, "Le séjour du Prophète ﷺ chez les Banû Saʿd après l'allaitement", "s3", "s3-h10"], [2, "L'ouverture de la poitrine", "s3", "s3-h11"], [2, "Auprès de son grand-père affectueux", "s3", "s3-h12"], [2, "Auprès de son oncle compatissant", "s3", "s3-h13"], [2, "Son voyage au Châm et le moine Bahîrâ", "s3", "s3-h14"], [2, "La guerre d'al-Fijâr", "s3", "s3-h15"], [2, "Le pacte d'al-Fudûl", "s3", "s3-h16"], [2, "La vie de travail", "s3", "s3-h17"], [2, "Son voyage au Châm pour commercer avec les biens de Khadîja", "s3", "s3-h18"], [2, "Son mariage avec Khadîja", "s3", "s3-h19"], [2, "Ses enfants ﷺ de Khadîja", "s3", "s3-h20"], [2, "La reconstruction de la Maison et l'histoire de l'arbitrage", "s3", "s3-h21"], [2, "Sa conduite ﷺ avant la mission", "s3", "s3-h22"], [1, "La prophétie et l'appel", "s4", null], [2, "Les prémices de la prophétie et les annonces du bonheur", "s4", "s4-h23"], [2, "Le début de la prophétie et la descente de la révélation", "s4", "s4-h24"], [2, "La date du début de la prophétie et de la descente de la révélation", "s4", "s4-h25"], [2, "L'interruption de la révélation, puis son retour", "s4", "s4-h26"], [2, "L'entreprise de l'appel", "s4", "s4-h27"], [2, "La première génération", "s4", "s4-h28"], [2, "Le culte des croyants et leur éducation", "s4", "s4-h29"], [1, "La proclamation publique de l'appel", "s5", null], [2, "L'appel adressé aux proches parents", "s5", "s5-h30"], [2, "Sur le mont as-Safâ", "s5", "s5-h31"], [2, "La concertation de Quraych pour détourner les pèlerins de l'appel", "s5", "s5-h32"], [2, "Divers moyens pour affronter l'appel", "s5", "s5-h33"], [3, "1 – Premier moyen : poursuivre la raillerie et la moquerie, et les multiplier", "s5", "s5-h34"], [3, "2 – Deuxième moyen : empêcher les gens d'écouter le Prophète ﷺ", "s5", "s5-h35"], [3, "3 – Troisième moyen : soulever des ambiguïtés et intensifier la propagande mensongère", "s5", "s5-h36"], [3, "4 – Quatrième moyen : la discussion et la dispute", "s5", "s5-h37"], [2, "La torture des musulmans", "s5", "s5-h38"], [1, "L'attitude des associateurs envers le Messager d'Allah ﷺ", "s6", null], [2, "Entre Quraych et Abû Tâlib", "s6", "s6-h39"], [2, "L'avertissement de Quraych et son défi à Abû Tâlib", "s6", "s6-h40"], [2, "Une proposition étrange de Quraych, et une réponse piquante d'Abû Tâlib", "s6", "s6-h41"], [1, "Les agressions contre le Messager d'Allah ﷺ", "s7", null], [2, "La maison d'al-Arqam", "s7", "s7-h42"], [2, "L'émigration en Abyssinie", "s7", "s7-h43"], [2, "Les associateurs se joignent aux musulmans et se prosternent lors de la sourate An-Najm", "s7", "s7-h44"], [2, "Le retour des émigrés à La Mecque", "s7", "s7-h45"], [2, "La seconde émigration en Abyssinie", "s7", "s7-h46"], [2, "La ruse de Quraych contre les émigrés d'Abyssinie", "s7", "s7-h47"], [2, "Le désarroi des associateurs", "s7", "s7-h48"], [2, "La torture et la tentative de meurtre", "s7", "s7-h49"], [2, "La conversion de Hamza – qu'Allah l'agrée", "s7", "s7-h50"], [2, "La conversion de ʿUmar – qu'Allah l'agrée", "s7", "s7-h51"], [2, "La réaction des associateurs à la conversion de ʿUmar", "s7", "s7-h52"], [2, "La puissance de l'Islam et des musulmans par la conversion de ʿUmar", "s7", "s7-h53"], [1, "La présentation d'avantages et de tentations", "s8", null], [2, "Marchandages et concessions", "s8", "s8-h54"], [2, "La demande de hâter le châtiment", "s8", "s8-h55"], [1, "Le boycott général et l'imposition du blocus", "s9", null], [2, "La rupture du document et la levée du blocus", "s9", "s9-h56"], [2, "La délégation de Quraych auprès d'Abû Tâlib", "s9", "s9-h57"], [1, "L'année de la tristesse", "s10", null], [2, "La mort d'Abû Tâlib", "s10", "s10-h58"], [2, "Khadîja rejoint la miséricorde d'Allah", "s10", "s10-h59"], [2, "L'accumulation des peines", "s10", "s10-h60"], [2, "Son mariage ﷺ avec Sawda, puis avec ʿÂ'icha – qu'Allah les agrée", "s10", "s10-h61"], [1, "Le Messager ﷺ à Tâ'if", "s11", null], [1, "La dispute des associateurs et leur demande de signes", "s12", null], [2, "La fente de la lune", "s12", "s12-h62"], [1, "Le Voyage nocturne et l'Ascension", "s13", null], [1, "La présentation de l'Islam aux tribus et aux individus", "s14", null], [2, "Les croyants qui n'étaient pas de La Mecque", "s14", "s14-h63"], [2, "L'Islam à Médine", "s14", "s14-h64"], [1, "Le premier serment d'al-ʿAqaba", "s15", null], [2, "L'appel à l'Islam à Yathrib", "s15", "s15-h65"], [1, "Le second serment d'al-ʿAqaba", "s16", null], [2, "Douze chefs (nuqabâ')", "s16", "s16-h66"], [1, "L'émigration des musulmans à Médine", "s17", null], [1, "Quraych à Dâr an-Nadwa et sa décision de tuer le Prophète ﷺ", "s18", null], [1, "Entre le plan de Quraych et le plan d'Allah – Gloire à Lui, le Très-Haut", "s19", null], [1, "L'émigration du Prophète ﷺ", "s20", null], [2, "Sa sortie ﷺ de la maison", "s20", "s20-h67"], [2, "Trois nuits dans la grotte", "s20", "s20-h68"], [2, "Sur la route de Médine", "s20", "s20-h69"], [2, "L'arrivée à Qubâ'", "s20", "s20-h70"], [2, "L'entrée à Médine", "s20", "s20-h71"], [2, "L'émigration de ʿAlî et sa jonction avec le Messager d'Allah ﷺ", "s20", "s20-h72"], [2, "L'émigration de la famille du Prophète", "s20", "s20-h73"], [2, "L'émigration de Suhayb", "s20", "s20-h74"], [2, "Les opprimés", "s20", "s20-h75"], [2, "Le climat de Médine", "s20", "s20-h76"], [1, "Les œuvres du Messager d'Allah ﷺ à Médine l'illuminée", "s21", null], [2, "La Mosquée du Prophète", "s21", "s21-h77"], [2, "L'appel à la prière (al-adhân)", "s21", "s21-h78"], [2, "La fraternisation entre les Émigrés et les Ansâr", "s21", "s21-h79"], [2, "La fondation de la société islamique et de la communauté islamique", "s21", "s21-h80"], [1, "Les provocations de Quraych", "s22", null], [2, "Les manigances de Quraych", "s22", "s22-h81"], [2, "La légitimation du combat", "s22", "s22-h82"], [2, "Les expéditions (sarâyâ) et les campagnes (ghazawât)", "s22", "s22-h83"], [1, "La grande bataille de Badr", "s23", null], [2, "Les duels et le combat", "s23", "s23-h84"], [2, "La mort d'Abû Jahl", "s23", "s23-h85"], [2, "Le jour du Discernement (yawm al-furqân)", "s23", "s23-h86"], [2, "Les morts des deux camps", "s23", "s23-h87"], [2, "La nouvelle de la bataille à La Mecque et à Médine", "s23", "s23-h88"], [2, "Le retour du Messager ﷺ à Médine", "s23", "s23-h89"], [2, "L'affaire des captifs", "s23", "s23-h90"], [2, "La mort de sa fille ﷺ Ruqayya, et le mariage de sa fille Umm Kulthûm avec ʿUthmân", "s23", "s23-h91"], [2, "La campagne des Banû Qaynuqâʿ", "s23", "s23-h92"], [2, "La campagne d'as-Sawîq", "s23", "s23-h93"], [2, "L'exécution de Kaʿb ibn al-Achraf", "s23", "s23-h94"], [2, "L'expédition d'al-Qarada", "s23", "s23-h95"], [1, "La campagne d'Uhud", "s24", null], [2, "Les duels et le combat", "s24", "s24-h96"], [2, "L'attaque des associateurs contre le Messager d'Allah ﷺ et la rumeur de sa mort", "s24", "s24-h97"], [2, "L'attitude de l'ensemble des musulmans après l'encerclement", "s24", "s24-h98"], [2, "Dans le ravin", "s24", "s24-h99"], [2, "Un dialogue et une décision", "s24", "s24-h100"], [2, "Le retour des associateurs ; les musulmans s'occupent des blessés et enterrent les martyrs", "s24", "s24-h101"], [2, "Vers Médine, et à Médine", "s24", "s24-h102"], [2, "La campagne de Hamrâ' al-Asad", "s24", "s24-h103"], [1, "Événements et campagnes", "s25", null], [2, "L'incident d'ar-Rajîʿ", "s25", "s25-h104"], [2, "La tragédie de Bi'r Maʿûna", "s25", "s25-h105"], [1, "La campagne des Banû an-Nadîr", "s26", null], [2, "La campagne de Badr du rendez-vous", "s26", "s26-h106"], [1, "La campagne des Coalisés (al-Ahzâb)", "s27", null], [2, "La consultation et le creusement du Fossé", "s27", "s27-h107"], [2, "De part et d'autre du Fossé", "s27", "s27-h108"], [2, "La trahison des Banû Qurayza et son effet sur le cours de la campagne", "s27", "s27-h109"], [2, "L'abandon mutuel des coalisés et la fin de la campagne", "s27", "s27-h110"], [1, "La campagne des Banû Qurayza", "s28", null], [2, "L'exécution d'Abû Râfiʿ Sallâm ibn Abî al-Huqayq", "s28", "s28-h111"], [2, "La capture de Thumâma ibn Uthâl, seigneur d'al-Yamâma", "s28", "s28-h112"], [2, "La campagne des Banû Lihyân", "s28", "s28-h113"], [2, "L'expédition d'al-ʿÎs et la conversion d'Abû al-ʿÂs, époux de Zaynab, fille du Messager d'Allah ﷺ", "s28", "s28-h114"], [1, "La campagne des Banû al-Mustaliq, ou campagne d'al-Muraysîʿ", "s29", null], [2, "1 – Premier incident : la parole du chef des hypocrites : « Si nous retournons à Médine, le plus puissant en expulsera le plus vil »", "s29", "s29-h115"], [2, "2 – Second incident : la calomnie (al-ifk) des hypocrites", "s29", "s29-h116"], [1, "La ʿumra d'al-Hudaybiya", "s30", null], [2, "Le départ pour la ʿumra et la halte à al-Hudaybiya", "s30", "s30-h117"], [2, "Entre le Messager d'Allah ﷺ et Quraych", "s30", "s30-h118"], [2, "ʿUthmân ibn ʿAffân envoyé auprès de Quraych, et le serment d'ar-Ridwân", "s30", "s30-h119"], [2, "La conclusion de la paix", "s30", "s30-h120"], [2, "L'affaire d'Abû Jandal", "s30", "s30-h121"], [2, "La désacralisation des musulmans et leur tristesse au sujet de la paix", "s30", "s30-h122"], [2, "L'affaire des femmes émigrées", "s30", "s30-h123"], [2, "L'entrée de Khuzâʿa dans l'alliance des musulmans", "s30", "s30-h124"], [2, "La solution de l'affaire des opprimés", "s30", "s30-h125"], [2, "L'effet de la paix", "s30", "s30-h126"], [1, "La correspondance avec les rois et les princes", "s31", null], [2, "1 – Sa lettre ﷺ au Négus Ashama ibn Abjar, roi d'Abyssinie", "s31", "s31-h127"], [2, "2 – Sa lettre ﷺ à al-Muqawqis, roi d'Alexandrie", "s31", "s31-h128"], [2, "3 – Sa lettre ﷺ à Chosroès Abarwîz, roi de Perse", "s31", "s31-h129"], [2, "4 – La lettre du Prophète ﷺ à César, roi des Byzantins", "s31", "s31-h130"], [2, "5 – Sa lettre ﷺ à al-Hârith ibn Abî Chimr al-Ghassânî", "s31", "s31-h131"], [2, "6 – Sa lettre ﷺ à l'émir de Busrâ", "s31", "s31-h132"], [2, "7 – Sa lettre ﷺ à Hawdha ibn ʿAlî, maître d'al-Yamâma", "s31", "s31-h133"], [2, "8 – La lettre du Messager d'Allah ﷺ à al-Mundhir ibn Sâwâ, roi de Bahreïn", "s31", "s31-h134"], [2, "9 – La lettre du Messager d'Allah ﷺ aux deux rois d'Oman, Jayfar et son frère", "s31", "s31-h135"], [1, "Entre les musulmans et les autres parties", "s32", null], [2, "La campagne d'al-Ghâba", "s32", "s32-h136"], [1, "La campagne de Khaybar", "s33", null], [2, "La conquête d'an-Natât", "s33", "s33-h137"], [2, "La conquête d'ach-Chiqq", "s33", "s33-h138"], [2, "La conquête d'al-Katîba", "s33", "s33-h139"], [2, "Les morts des deux camps", "s33", "s33-h140"], [2, "L'arrivée des émigrés d'Abyssinie, d'Abû Hurayra et d'Abân ibn Saʿîd", "s33", "s33-h141"], [2, "Le partage de Khaybar", "s33", "s33-h142"], [2, "La brebis empoisonnée", "s33", "s33-h143"], [2, "La reddition des gens de Fadak", "s33", "s33-h144"], [2, "Wâdî al-Qurâ", "s33", "s33-h145"], [2, "La paix avec les gens de Taymâ'", "s33", "s33-h146"], [2, "Son mariage ﷺ avec Safiyya", "s33", "s33-h147"], [1, "La campagne de Dhât ar-Riqâʿ", "s34", null], [2, "« Qui te protégera de moi ? »", "s34", "s34-h148"], [1, "La ʿumra de l'accomplissement (ʿumrat al-qadâ')", "s35", null], [1, "La bataille de Mu'ta", "s36", null], [2, "L'expédition de Dhât as-Salâsil", "s36", "s36-h149"], [1, "La grande conquête : la conquête de La Mecque l'honorée", "s37", null], [2, "La cause, les préparatifs et le secret", "s37", "s37-h150"], [2, "La rupture du pacte", "s37", "s37-h151"], [2, "Sur la route de La Mecque", "s37", "s37-h152"], [2, "Abû Sufyân devant le Messager d'Allah ﷺ", "s37", "s37-h153"], [2, "L'entrée du Messager d'Allah ﷺ à La Mecque l'honorée", "s37", "s37-h154"], [2, "La purification de la Kaʿba et la prière à l'intérieur", "s37", "s37-h155"], [2, "« Pas de reproche contre vous »", "s37", "s37-h156"], [2, "L'allégeance", "s37", "s37-h157"], [2, "Des gens dont le sang fut déclaré licite", "s37", "s37-h158"], [2, "La prière de la conquête", "s37", "s37-h159"], [2, "Bilâl fait l'appel à la prière sur le toit de la Kaʿba", "s37", "s37-h160"], [2, "Le séjour du Messager d'Allah ﷺ à La Mecque", "s37", "s37-h161"], [2, "La destruction d'al-ʿUzzâ, de Suwâʿ et de Manât", "s37", "s37-h162"], [2, "L'envoi de Khâlid chez les Banû Jadhîma", "s37", "s37-h163"], [1, "La campagne de Hunayn", "s38", null], [2, "La poursuite des associateurs", "s38", "s38-h164"], [2, "La campagne de Tâ'if", "s38", "s38-h165"], [2, "Le partage du butin et des captifs", "s38", "s38-h166"], [2, "La plainte des Ansâr et le sermon du Messager d'Allah ﷺ", "s38", "s38-h167"], [2, "La délégation de Hawâzin", "s38", "s38-h168"], [2, "La ʿumra d'al-Jiʿrâna", "s38", "s38-h169"], [2, "Le châtiment des Banû Tamîm et leur entrée dans l'Islam", "s38", "s38-h170"], [2, "La destruction d'al-Fuls des Banû Tayyi' et la conversion de ʿAdî ibn Hâtim", "s38", "s38-h171"], [1, "La campagne de Tabûk", "s39", null], [2, "La préparation des musulmans à la rencontre des Byzantins", "s39", "s39-h172"], [2, "L'armée musulmane en route pour Tabûk", "s39", "s39-h173"], [2, "Vingt jours à Tabûk", "s39", "s39-h174"], [2, "La capture d'Ukaydir de Dûmat al-Jandal", "s39", "s39-h175"], [2, "Le retour à Médine", "s39", "s39-h176"], [2, "La démolition de la mosquée de la nuisance (masjid ad-dirâr)", "s39", "s39-h177"], [2, "L'accueil du Messager d'Allah ﷺ par les gens de Médine", "s39", "s39-h178"], [2, "Ceux qui étaient restés en arrière", "s39", "s39-h179"], [1, "Un mot sur les campagnes", "s40", null], [1, "Le pèlerinage d'Abû Bakr as-Siddîq – qu'Allah l'agrée", "s41", null], [1, "Les délégations, les prédicateurs et les gouverneurs", "s42", null], [2, "La délégation de ʿAbd al-Qays", "s42", "s42-h180"], [2, "La visite de Dimâm ibn Thaʿlaba, des Banû Saʿd ibn Bakr", "s42", "s42-h181"], [2, "La délégation de ʿUdhra et de Baliyy", "s42", "s42-h182"], [2, "La délégation des Banû Asad ibn Khuzayma", "s42", "s42-h183"], [2, "La délégation de Tujîb", "s42", "s42-h184"], [2, "La délégation des Banû Fazâra", "s42", "s42-h185"], [2, "La délégation de Najrân", "s42", "s42-h186"], [2, "La délégation des gens de Tâ'if", "s42", "s42-h187"], [2, "La délégation des Banû ʿÂmir ibn Saʿsaʿa", "s42", "s42-h188"], [2, "La délégation des Banû Hanîfa", "s42", "s42-h189"], [2, "La venue de l'envoyé des rois de Himyar, et l'envoi de Muʿâdh ibn Jabal et d'Abû Mûsâ", "s42", "s42-h190"], [2, "La délégation de Hamdân, et l'envoi de Khâlid et de ʿAlî", "s42", "s42-h191"], [2, "La délégation des Banû ʿAbd al-Madân", "s42", "s42-h192"], [2, "L'Islam des Banû Madhhij", "s42", "s42-h193"], [2, "La délégation d'Azd Chanû'a", "s42", "s42-h194"], [2, "La venue de Jarîr ibn ʿAbd Allâh al-Bajalî et la destruction de Dhû al-Khalasa", "s42", "s42-h195"], [2, "L'apparition d'al-Aswad al-ʿAnsî et sa mort", "s42", "s42-h196"], [1, "Le Pèlerinage d'adieu", "s43", null], [2, "L'envoi d'Usâma ibn Zayd", "s43", "s43-h197"], [1, "Vers le Compagnon suprême", "s44", null], [2, "Les signes de l'adieu", "s44", "s44-h198"], [2, "Le début de la maladie", "s44", "s44-h199"], [2, "Ses engagements et ses recommandations", "s44", "s44-h200"], [2, "Abû Bakr désigné pour diriger la prière", "s44", "s44-h201"], [2, "Il donne en aumône ce qu'il possède", "s44", "s44-h202"], [2, "Son dernier jour en ce monde", "s44", "s44-h203"], [2, "L'agonie et la mort", "s44", "s44-h204"], [2, "Le désarroi des Compagnons et la position d'Abû Bakr", "s44", "s44-h205"], [2, "Le choix d'Abû Bakr pour lui succéder ﷺ", "s44", "s44-h206"], [2, "La préparation et l'inhumation du noble corps", "s44", "s44-h207"], [1, "La maison du Prophète", "s45", null], [2, "1 – La Mère des croyants Khadîja, fille de Khuwaylid – qu'Allah l'agrée", "s45", "s45-h208"], [2, "2 – La Mère des croyants Sawda, fille de Zamʿa – qu'Allah l'agrée", "s45", "s45-h209"], [2, "3 – La Mère des croyants ʿÂ'icha la véridique, fille du Véridique – qu'Allah les agrée tous deux", "s45", "s45-h210"], [2, "4 – La Mère des croyants Hafsa, fille de ʿUmar ibn al-Khattâb – qu'Allah les agrée tous deux", "s45", "s45-h211"], [2, "5 – La Mère des croyants Zaynab, fille de Khuzayma al-Hilâliyya – qu'Allah l'agrée", "s45", "s45-h212"], [2, "6 – La Mère des croyants Umm Salama Hind, fille d'Abû Umayya – qu'Allah l'agrée", "s45", "s45-h213"], [2, "7 – La Mère des croyants Zaynab, fille de Jahch ibn Ri'âb – qu'Allah l'agrée", "s45", "s45-h214"], [2, "8 – La Mère des croyants Juwayriya, fille d'al-Hârith, seigneur des Banû al-Mustaliq – qu'Allah les agrée tous deux", "s45", "s45-h215"], [2, "9 – La Mère des croyants Umm Habîba Ramla, fille d'Abû Sufyân – qu'Allah les agrée tous deux", "s45", "s45-h216"], [2, "10 – La Mère des croyants Safiyya, fille de Huyayy ibn Akhtab – qu'Allah l'agrée", "s45", "s45-h217"], [2, "11 – La Mère des croyants Maymûna, fille d'al-Hârith al-Hilâliyya – qu'Allah l'agrée", "s45", "s45-h218"], [2, "Ses enfants ﷺ", "s45", "s45-h219"], [1, "Les qualités physiques et morales", "s46", null], [2, "Le visage et ce qui s'y trouve", "s46", "s46-h220"], [2, "La tête, le cou et les cheveux", "s46", "s46-h221"], [2, "Les extrémités et les membres", "s46", "s46-h222"], [2, "La taille et le corps", "s46", "s46-h223"], [2, "Son parfum ﷺ", "s46", "s46-h224"], [2, "Sa démarche", "s46", "s46-h225"], [2, "La voix et la parole", "s46", "s46-h226"], [2, "Un aperçu de son caractère ﷺ", "s46", "s46-h227"]], "files": {"s1": "01-presentation-de-l-auteur-et-de-l-ouvrage.html", "s2": "02-introduction-de-l-auteur.html", "s3": "03-muhammad-ses-origines-sa-jeunesse-et-sa-vie-avant.html", "s4": "04-la-prophetie-et-l-appel.html", "s5": "05-la-proclamation-publique-de-l-appel.html", "s6": "06-l-attitude-des-associateurs-envers-le-messager-d-a.html", "s7": "07-les-agressions-contre-le-messager-d-allah.html", "s8": "08-la-presentation-d-avantages-et-de-tentations.html", "s9": "09-le-boycott-general-et-l-imposition-du-blocus.html", "s10": "10-l-annee-de-la-tristesse.html", "s11": "11-le-messager-a-ta-if.html", "s12": "12-la-dispute-des-associateurs-et-leur-demande-de-sig.html", "s13": "13-le-voyage-nocturne-et-l-ascension.html", "s14": "14-la-presentation-de-l-islam-aux-tribus-et-aux-indiv.html", "s15": "15-le-premier-serment-d-al-aqaba.html", "s16": "16-le-second-serment-d-al-aqaba.html", "s17": "17-l-emigration-des-musulmans-a-medine.html", "s18": "18-quraych-a-dar-an-nadwa-et-sa-decision-de-tuer-le-p.html", "s19": "19-entre-le-plan-de-quraych-et-le-plan-d-allah-gloire.html", "s20": "20-l-emigration-du-prophete.html", "s21": "21-les-uvres-du-messager-d-allah-a-medine-l-illuminee.html", "s22": "22-les-provocations-de-quraych.html", "s23": "23-la-grande-bataille-de-badr.html", "s24": "24-la-campagne-d-uhud.html", "s25": "25-evenements-et-campagnes.html", "s26": "26-la-campagne-des-banu-an-nadir.html", "s27": "27-la-campagne-des-coalises-al-ahzab.html", "s28": "28-la-campagne-des-banu-qurayza.html", "s29": "29-la-campagne-des-banu-al-mustaliq-ou-campagne-d-al.html", "s30": "30-la-umra-d-al-hudaybiya.html", "s31": "31-la-correspondance-avec-les-rois-et-les-princes.html", "s32": "32-entre-les-musulmans-et-les-autres-parties.html", "s33": "33-la-campagne-de-khaybar.html", "s34": "34-la-campagne-de-dhat-ar-riqa.html", "s35": "35-la-umra-de-l-accomplissement-umrat-al-qada.html", "s36": "36-la-bataille-de-mu-ta.html", "s37": "37-la-grande-conquete-la-conquete-de-la-mecque-l-hono.html", "s38": "38-la-campagne-de-hunayn.html", "s39": "39-la-campagne-de-tabuk.html", "s40": "40-un-mot-sur-les-campagnes.html", "s41": "41-le-pelerinage-d-abu-bakr-as-siddiq-qu-allah-l-agre.html", "s42": "42-les-delegations-les-predicateurs-et-les-gouverneur.html", "s43": "43-le-pelerinage-d-adieu.html", "s44": "44-vers-le-compagnon-supreme.html", "s45": "45-la-maison-du-prophete.html", "s46": "46-les-qualites-physiques-et-morales.html"}, "cur": "s12"}</script>
+<script>
+(function(){
+const D=JSON.parse(document.getElementById('data').textContent);
+const S=D.sections, T=D.toc, F=D.files, C=D.cur;
+const url=(s,a)=>(F[s]||'index.html')+'#'+(a||s);
+const $=id=>document.getElementById(id);
+const store={get(k,d){try{const v=localStorage.getItem('rawda:'+k);return v?JSON.parse(v):d}catch(e){return d}},
+  set(k,v){try{localStorage.setItem('rawda:'+k,JSON.stringify(v))}catch(e){}}};
+let cur=-1, saveT=null;
+const idx=id=>S.findIndex(s=>s.id===id);
+
+// thème & taille
+const themes=['system','light','dark'];
+function applyTheme(t){if(t==='system')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',t);}
+let theme=store.get('theme','system');applyTheme(theme);
+$('btn-th').onclick=()=>{theme=themes[(themes.indexOf(theme)+1)%3];applyTheme(theme);store.set('theme',theme);toast(theme==='system'?'Thème du système':theme==='light'?'Thème clair':'Thème sombre');};
+let fs=store.get('fs',matchMedia('(min-width:1080px)').matches?1.2:1.08);
+function applyFs(){document.documentElement.style.setProperty('--fs',fs+'rem');}
+applyFs();
+$('btn-fm').onclick=()=>{fs=Math.max(.9,+(fs-.06).toFixed(2));applyFs();store.set('fs',fs);};
+$('btn-fp').onclick=()=>{fs=Math.min(1.5,+(fs+.06).toFixed(2));applyFs();store.set('fs',fs);};
+
+function toast(m){const t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),1800);}
+
+// sommaire
+function buildToc(){
+  let h='<a href="index.html" data-s="cover" class="l1 solo">Couverture</a>';let open=false;
+  for(const [l,tt,s,a] of T){
+    if(l===1){if(open)h+='</div></div>';h+=`<div class="grp" data-g="${s}"><div class="gh"><button class="car" aria-label="Déplier ou replier" aria-expanded="false">▸</button><a href="${url(s)}" data-s="${s}" class="l1">${esc(tt)}</a></div><div class="kids">`;open=true;}
+    else h+=`<a href="${url(s,a)}" data-s="${s}" class="l${l}">${esc(tt)}</a>`;
+  }
+  if(open)h+='</div></div>';
+  $('toclist').innerHTML=h;
+}
+$('toclist').addEventListener('click',e=>{const c=e.target.closest('.car');if(c){e.preventDefault();e.stopPropagation();const g=c.closest('.grp');g.classList.toggle('open');c.setAttribute('aria-expanded',g.classList.contains('open'));}},true);
+function openGroupOf(sid){const a=$('toclist').querySelector(`a[data-s="${sid}"]`);const g=a&&a.closest('.grp');if(g&&!g.classList.contains('open')){g.classList.add('open');g.querySelector('.car').setAttribute('aria-expanded','true');}}
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+buildToc();
+
+// tiroir
+function openD(tab){$('drawer').classList.add('open');$('shade').hidden=false;showTab(tab||'toc');
+  const c=$('toclist').querySelector('a.cur');if(c&&tab!=='bm')c.scrollIntoView({block:'center'});}
+function closeD(){if(wide())return;$('drawer').classList.remove('open');$('shade').hidden=true;}
+function wide(){return matchMedia('(min-width:1080px)').matches;}
+$('btn-toc').onclick=()=>{if(wide()){const h=document.body.classList.toggle('side-off');store.set('sideoff',h);}else openD('toc');};
+if(store.get('sideoff',false))document.body.classList.add('side-off');$('btn-close').onclick=closeD;$('shade').onclick=closeD;
+function showTab(t){$('toclist').hidden=t!=='toc';$('bmlist').hidden=t!=='bm';$('tab-toc').classList.toggle('on',t==='toc');$('tab-bm').classList.toggle('on',t==='bm');if(t==='bm')renderBm();}
+$('tab-toc').onclick=()=>showTab('toc');$('tab-bm').onclick=()=>showTab('bm');
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeD();});
+$('toclist').addEventListener('click',e=>{if(e.target.closest('a'))closeD();});
+
+// rendu
+function cover(){
+  if(C!=='cover'){location.href='index.html';return;}
+  cur=-1;
+  $('page').innerHTML=`<div class="cover">
+  <span class="orn" aria-hidden="true"></span>
+  <p class="arttl" lang="ar">روضة الأنوار</p>
+  <p class="arsub" lang="ar">في سيرة النبي المختار ﷺ</p>
+  <h1>Le jardin des lumières</h1>
+  <p class="sub">sur la biographie du Prophète élu ﷺ</p>
+  <p class="au">Safî ar-Rahmân al-Mubârakfûrî</p>
+  <p class="tr">Huitième édition, 1432 H · traduction française intégrale</p>
+  <div class="cta"><button id="go-start">Commencer la lecture</button>${resumeBtn()}</div>
+  <div class="rule"></div>
+  <p style="color:var(--muted);font-size:.92rem;text-align:center">${S.length} chapitres · versets en arabe vocalisé avec leur traduction et leurs références</p>
+  </div>
+  <section class="ctoc" aria-labelledby="ctoc-h"><h2 id="ctoc-h">Sommaire</h2><ol>${T.filter(x=>x[0]<=1).map(([l,t,s,a])=>`<li class="c${l}"><a href="${url(s,a)}">${esc(t)}</a></li>`).join('')}</ol></section>`;
+  $('go-start').onclick=()=>go(S[0].id);
+  const r=$('go-resume');if(r)r.onclick=()=>{const p=store.get('pos',null);go(p.s,null,p.y);};
+  $('ttl').innerHTML='<b>Le jardin des lumières</b>';
+  setNav();markToc('cover');progress();
+}
+function resumeBtn(){const p=store.get('pos',null);if(!p||idx(p.s)<0)return '';return `<button class="alt" id="go-resume">Reprendre : ${esc(S[idx(p.s)].title.slice(0,48))}</button>`;}
+function go(sid,anchor,y){
+  const i=idx(sid);if(i<0){cover();return;}
+  if(sid!==C){if(typeof y==='number')store.set('jump',{s:sid,y:y});location.href=url(sid,anchor);return;}
+  cur=i;const s=S[i];
+  $('page').innerHTML=s.html;
+  const part=partOf(i);
+  $('ttl').innerHTML=(part&&part!==s.title?esc(short(part))+' · ':'')+'<b>'+esc(short(s.title))+'</b>';
+  setNav();markToc(sid);
+  const want=anchor||sid;
+  if(location.hash.slice(1)!==want)history.replaceState(null,'','#'+want);
+  requestAnimationFrame(()=>{
+    if(anchor){const el=document.getElementById(anchor);if(el){el.scrollIntoView();progress();return;}}
+    if(typeof y==='number'){window.scrollTo(0,y*(document.documentElement.scrollHeight-innerHeight));}
+    else window.scrollTo(0,0);
+    progress();
+  });
+}
+function short(t){return t.length>60?t.slice(0,58)+'…':t;}
+function partOf(i){for(let k=i;k>=0;k--)if(S[k].level===1)return S[k].title;return '';}
+function setNav(){
+  const p=cur-1,n=cur+1;
+  $('prev').disabled=cur<0;$('prevt').textContent=p>=0?S[p].title:'Couverture';
+  $('next').disabled=n>=S.length;$('nextt').textContent=n<S.length?S[n].title:'';
+}
+$('prev').onclick=()=>{if(cur<=0)cover();else go(S[cur-1].id);};
+$('next').onclick=()=>{if(cur+1<S.length)go(S[cur+1].id);};
+function markToc(sid){$('toclist').querySelectorAll('a').forEach(a=>a.classList.toggle('cur',a.dataset.s===sid&&!a.getAttribute('href').includes('-h')));openGroupOf(sid);if(wide()){const c=$('toclist').querySelector('a.cur');if(c){const r=c.getBoundingClientRect(),d=$('toclist').getBoundingClientRect();if(r.top<d.top||r.bottom>d.bottom)c.scrollIntoView({block:'center'});}}}
+
+// progression
+function frac(){const h=document.documentElement.scrollHeight-innerHeight;return h>0?Math.min(1,Math.max(0,scrollY/h)):1;}
+function progress(){
+  const tot=cur<0?0:(cur+frac())/S.length;
+  $('progbar').style.width=(tot*100).toFixed(1)+'%';$('pct').textContent=Math.round(tot*100)+' %';
+  if(cur>=0){clearTimeout(saveT);saveT=setTimeout(()=>store.set('pos',{s:S[cur].id,y:frac()}),300);}
+}
+addEventListener('scroll',progress,{passive:true});addEventListener('resize',progress);
+
+// marque-pages
+function nearestHeading(){
+  const hs=[...$('page').querySelectorAll('h3[id],h4[id],h5[id]')];let best=null;
+  for(const h of hs){if(h.getBoundingClientRect().top<140)best=h;}
+  return best;
+}
+$('btn-bm').onclick=()=>{
+  if(cur<0){toast('Ouvrez un chapitre pour poser un marque-page');return;}
+  const h=nearestHeading();const list=store.get('bm',[]);
+  const item={s:S[cur].id,a:h?h.id:null,y:frac(),t:S[cur].title,h:h?h.textContent:'',d:Date.now()};
+  list.unshift(item);store.set('bm',list.slice(0,60));updCount();toast('Marque-page ajouté');
+};
+function updCount(){const n=store.get('bm',[]).length;$('bmcount').textContent=n?'('+n+')':'';}
+function renderBm(){
+  const list=store.get('bm',[]);
+  if(!list.length){$('bmlist').innerHTML='<p class="empty">Aucun marque-page. Pendant la lecture, touchez « 🔖 Marquer » pour enregistrer l\'endroit où vous êtes.</p>';return;}
+  $('bmlist').innerHTML=list.map((b,i)=>`<div class="bm"><a href="#" data-i="${i}">${esc(b.h||b.t)}<small>${esc(b.h?b.t:'')} · ${Math.round(b.y*100)} % du chapitre · ${new Date(b.d).toLocaleDateString('fr-FR')}</small></a><button data-del="${i}" aria-label="Supprimer">✕</button></div>`).join('');
+}
+$('bmlist').addEventListener('click',e=>{
+  const a=e.target.closest('a[data-i]'),d=e.target.closest('button[data-del]');const list=store.get('bm',[]);
+  if(a){e.preventDefault();const b=list[+a.dataset.i];closeD();go(b.s,null,b.y);}
+  if(d){list.splice(+d.dataset.del,1);store.set('bm',list);updCount();renderBm();}
+});
+updCount();
+
+// routage
+function route(){
+  const h=decodeURIComponent(location.hash.slice(1));
+  if(h==='couverture'){cover();return;}
+  if(!h){if(C==='cover'){cover();return;}const j=store.get('jump',null);if(j&&j.s===C){store.set('jump',null);go(C,null,j.y);}else go(C);return;}
+  const sid=h.split('-')[0];
+  if(sid.startsWith('n')||sid.startsWith('r')){ // note: rester dans le chapitre
+    const el=document.getElementById(h);if(el)el.scrollIntoView({block:'center'});return;}
+  if(idx(sid)<0){cover();return;}
+  if(sid===C&&cur<0){const j=store.get('jump',null);if(j&&j.s===C){store.set('jump',null);go(C,null,j.y);return;}}
+  if(S[cur]&&S[cur].id===sid){const el=document.getElementById(h);if(el&&h!==sid)el.scrollIntoView();else if(h===sid)scrollTo(0,0);return;}
+  go(sid,h!==sid?h:null);
+}
+  /* ---------- fenêtre des notes ---------- */
+  (function () {
+    let pop = null, anchor = null;
+    function close() { if (pop) { pop.remove(); pop = null; } if (anchor) { anchor.setAttribute('aria-expanded', 'false'); anchor = null; } }
+    function place() {
+      if (!pop || !anchor) return;
+      const r = anchor.getBoundingClientRect(), w = pop.offsetWidth, h = pop.offsetHeight, m = 12;
+      let left = Math.min(Math.max(m, r.left + r.width / 2 - w / 2), innerWidth - w - m);
+      let top = r.bottom + 8, below = true;
+      if (top + h > innerHeight - m && r.top - h - 8 > m) { top = r.top - h - 8; below = false; }
+      pop.style.left = left + 'px'; pop.style.top = top + 'px';
+      pop.classList.toggle('up', !below);
+      pop.style.setProperty('--ax', (r.left + r.width / 2 - left) + 'px');
+    }
+    document.addEventListener('click', function (e) {
+      const a = e.target.closest('sup.fn a');
+      if (a) {
+        e.preventDefault();
+        if (anchor === a) { close(); return; }
+        close();
+        const id = a.getAttribute('href').slice(1), li = document.getElementById(id);
+        if (!li) return;
+        const c = li.cloneNode(true); c.querySelectorAll('.back').forEach((x) => x.remove());
+        pop = document.createElement('div');
+        pop.className = 'notepop'; pop.setAttribute('role', 'dialog'); pop.setAttribute('aria-label', 'Note ' + a.textContent);
+        pop.innerHTML = '<div class="np-h"><span>Note ' + a.textContent + '</span><button class="np-x" aria-label="Fermer">✕</button></div><div class="np-b"></div><a class="np-go" href="#' + id + '">Voir dans la liste des notes ↓</a>';
+        pop.querySelector('.np-b').innerHTML = c.innerHTML;
+        document.body.appendChild(pop);
+        anchor = a; a.setAttribute('aria-expanded', 'true');
+        place();
+        pop.querySelector('.np-x').onclick = close;
+        pop.querySelector('.np-go').onclick = function (ev) { ev.preventDefault(); close(); li.scrollIntoView({ block: 'center' }); li.classList.add('flash'); setTimeout(() => li.classList.remove('flash'), 1600); };
+        return;
+      }
+      if (pop && !e.target.closest('.notepop')) close();
+    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    addEventListener('scroll', place, { passive: true });
+    addEventListener('resize', place);
+  })();
+
+addEventListener('hashchange',route);
+route();
+})();
+</script>
+
+</body>
+</html>
